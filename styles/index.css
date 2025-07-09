@@ -1,0 +1,112 @@
+html, body {}
+/* 헤더 */
+header {
+    display:flex;
+    padding:20px 300px;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee;
+}
+header .right_wrap {
+    display:flex; align-items:center;
+}
+header .right_wrap h1 {margin-right:30px;}
+header .right_wrap nav {}
+header .right_wrap nav a {
+    font-weight:500; margin-right:20px;
+}
+header .right_wrap nav a:last-child {margin-right:none;}
+header .left_wrap {display:flex; align-items:center;}
+header .left_wrap a {margin-right:10px;}
+header .left_wrap a:last-child {margin-right:0;}
+header .left_wrap a img {}
+header .left_wrap button {
+    font-size:0.75px; font-weight:500;
+    color:#fff;
+    background-color:#007BFF;
+    width:73px; height:32px;
+    border-radius:30px;
+}
+/* 대제목 영역 */
+main {}
+main .big_title {
+    background-color:#F8F9FA;
+    padding:50px 0;
+    text-align:center;
+}
+main .big_title h1 {
+    font-size:2.25rem; font-weight:700;
+    margin-bottom:40px;
+}
+main .big_title .article_info {
+    display:flex; align-items:center; justify-content:center;
+}
+main .big_title .article_info img:first-child {
+    margin-right:10px; /* 기자 프로필사진 */
+}
+main .big_title .article_info img:last-child {
+    /* 구분선 */
+    margin:0 20px 0 20px;
+}
+main .big_title .article_info span {
+    font-size:0.875rem; font-weight:500; color:#444;
+}
+/* 전체내용영역 */
+main .contents_wrap {}
+main .contents_wrap .container {
+    display:grid;
+    grid-template-areas:
+        'card1 card2'
+        'card3 card3';
+}
+main .contents_wrap .container .card {}
+main .contents_wrap .container .card .top {
+    display:flex;
+}
+main .contents_wrap .container .card .top h2 {
+    font-size:1.5rem; font-weight:500;
+}
+main .contents_wrap .container .card .top button {
+    font-size:0.75rem; padding:7px 10px;
+    border-radius:7px; border:1px solid #007BFF;
+}
+main .contents_wrap .container .card .img_wrap {
+    display:flex; align-items:start;
+}
+main .contents_wrap .container .card .img_wrap img {
+    margin-right:10px;
+}
+main .contents_wrap .container .card .img_wrap img:last-child {
+    margin-right:0;
+}
+main .contents_wrap .container .card p {
+    line-height:1.5;
+}
+main .contents_wrap .container .card1 {
+    width:608px; grid-area:card1;
+}
+main .contents_wrap .container .card1 p {width:100%;}
+main .contents_wrap .container .card2 {
+    width:661px; grid-area:card2;
+}
+main .contents_wrap .container .card2 p {width:100%;}
+main .contents_wrap .container .card3 {
+    grid-area:card3;
+}
+main .contents_wrap .container .card3 p:nth-child(1) {}
+main .contents_wrap .container .card3 p:nth-child(2) {}
+main .contents_wrap .container .card3 p:nth-child(3) {}
+/* 푸터 */
+footer {background:#F8F9FA; padding:20px 300px 40px;}
+footer h1 {margin-bottom:20px;}
+footer p {font-size:0.875rem;}
+
+@media screen and (max-width:600px){
+    main .contents_wrap .container {
+        display:grid;
+        grid-template-areas:
+            'card1'
+            'card2'
+            'card3';
+    }
+}
